@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter var';
   padding: 0;
@@ -34,7 +38,7 @@ body {
 
 .main-title {
   text-align: center;
-  padding: 12px 0;
+  padding: 12px 24px;
 }
 
 @media (min-width: 768px) {
@@ -56,14 +60,21 @@ body {
 }
 
 .nav-link-container li {
-  padding: 8px 0;
   font-size: 18px;
   border-bottom: 1px solid var(--gray-400);
+  list-style: none;
+  margin: 0;
+}
+
+.nav-link-container li a {
+  display: block;
+  width: 100%;
+  padding: 8px 24px;
+  white-space: nowrap;
 }
 
 .section {
   width: 100%;
-  margin: 10px 32px;
 }
 
 @media (min-width: 768px) {
@@ -72,8 +83,14 @@ body {
     width: 100%;
   }
   .navbar {
-    width: 300px;
+    width: 250px;
     border-right: 1px solid var(--gray-300);
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0%;
+    flex-shrink: 0;
+    height: 100vh;
   }
   .link-wrapper {
     height: 100%;
@@ -85,21 +102,26 @@ body {
   padding: 8px 16px;
   background-color: var(--gray-200);
   margin: 20px 0;
+  border-radius: 8px;
+  font-weight: 500;
 }
 
-p{
+p {
   padding: 4px 8px;
+  line-height: 1.7;
+  color: var(--gray-800);
 }
 
-li{
+li {
   list-style-type: circle;
   margin-left: 32px;
   padding: 4px 8px;
 }
 
-code{
-  background-color: var(--gray-100);
-  padding : 8px;
-  margin : 16px ;
-  display: block; 
+code {
+  background-color: #faf5ff;
+  padding: 16px;
+  display: block;
+  border-radius: 8px;
+  margin-top: 8px;
 }
